@@ -1,6 +1,0 @@
-apiVersion: v2
-name: notes-app
-description: A Helm chart for NoteOps application
-type: application
-version: 0.1.0
-appVersion: "1.0.0"  # This must be appVersion, not appversion or AppVersion

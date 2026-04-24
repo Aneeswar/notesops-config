@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base
+namespace: dev
+namePrefix: dev-
+
+patches:
+- target:
+    kind: Rollout
+    name: notes-app
+  patch: |-
+    - op: replace
+      path: /spec/replicas
+      value: 1
+
+commonAnnotations:
+  argocd-image-updater.argoproj.io/image-list: myimage=aneeswar/notes-app
+  argocd-image-updater.argoproj.io/myimage.update-strategy: latest
+  argocd-image-updater.argoproj.io/write-back-method: git
