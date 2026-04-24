@@ -22,6 +22,7 @@ patches:
       value: 1
 
 commonAnnotations:
-  argocd-image-updater.argoproj.io/image-list: myimage=aneeswar/notes-app
-  argocd-image-updater.argoproj.io/myimage.update-strategy: latest
+  argocd-image-updater.argoproj.io/image-list: notes-app=aneeswar/notes-app
+  argocd-image-updater.argoproj.io/notes-app.update-strategy: latest
+  argocd-image-updater.argoproj.io/notes-app.pull-secret: pullsecret:dev/docker-config
   argocd-image-updater.argoproj.io/write-back-method: git

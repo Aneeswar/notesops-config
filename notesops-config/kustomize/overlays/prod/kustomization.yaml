@@ -25,3 +25,8 @@ patches:
     - op: replace
       path: /spec/replicas
       value: 2
+
+commonAnnotations:
+  argocd-image-updater.argoproj.io/image-list: notes-app=aneeswar/notes-app
+  argocd-image-updater.argoproj.io/notes-app.update-strategy: latest
+  argocd-image-updater.argoproj.io/write-back-method: git
