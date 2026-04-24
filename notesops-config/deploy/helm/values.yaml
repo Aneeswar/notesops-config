@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: aneeswar/notes-app
   pullPolicy: IfNotPresent
-  tag: 04c4494
+  tag: 8c47944
 
 service:
   type: ClusterIP
