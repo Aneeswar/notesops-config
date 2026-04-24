@@ -7,6 +7,13 @@ namePrefix: dev-
 
 patches:
 - target:
+    kind: Ingress
+    name: notes-app-ingress
+  patch: |-
+    - op: replace
+      path: /spec/rules/0/host
+      value: dev.noteops.local
+- target:
     kind: Rollout
     name: notes-app
   patch: |-
