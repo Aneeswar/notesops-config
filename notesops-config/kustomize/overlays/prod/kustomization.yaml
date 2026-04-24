@@ -8,7 +8,7 @@ namePrefix: prod-
 images:
 - name: aneeswar/notes-app
   newName: aneeswar/notes-app
-  newTag: v1.0.0
+  newTag: latest
 
 patches:
 - target:
